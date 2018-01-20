@@ -14,14 +14,16 @@ defmodule BlogCrawler.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      mod: {BlogCrawler, []}
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:wallaby, "~> 0.19.2"}
+      {:wallaby, "~> 0.19.2"},
+      {:quantum, ">= 2.2.1"}
     ]
   end
 end
