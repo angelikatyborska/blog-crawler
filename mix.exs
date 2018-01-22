@@ -23,7 +23,8 @@ defmodule BlogCrawler.Mixfile do
   defp deps do
     [
       {:wallaby, "~> 0.19.2"},
-      {:quantum, ">= 2.2.1"}
+      {:quantum, ">= 2.2.1"},
+      {:verk, "~> 1.0"}
     ]
   end
 end

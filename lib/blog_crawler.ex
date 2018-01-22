@@ -1,4 +1,6 @@
 defmodule BlogCrawler do
+  require Logger
+
   use Application
 
   import Supervisor.Spec
@@ -6,6 +8,7 @@ defmodule BlogCrawler do
   def start(_type, _args) do
 
     children = [
+      supervisor(Verk.Supervisor, []),
       worker(BlogCrawler.Scheduler, [])
     ]
 
@@ -14,6 +17,7 @@ defmodule BlogCrawler do
   end
 
   def test_task do
-    IO.puts("test task")
+    Logger.info("test reoccuring task")
+    Verk.enqueue(%Verk.Job{queue: :default, class: "BlogCrawler.TestWorker", args: [%{a: "A"}], max_retry_count: 5})
   end
 end
