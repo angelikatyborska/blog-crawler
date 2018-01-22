@@ -24,7 +24,8 @@ defmodule BlogCrawler.Mixfile do
     [
       {:wallaby, "~> 0.19.2"},
       {:quantum, ">= 2.2.1"},
-      {:verk, "~> 1.0"}
+      {:verk, "~> 1.0"},
+      {:verk_web, "~> 1.0"}
     ]
   end
 end

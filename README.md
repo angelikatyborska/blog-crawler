@@ -6,9 +6,15 @@ Get a list of all posts from my own blog.
 
 1. Install Chrome
 
-2. Install ChromeDriver `brew install chromedriver`
+2. Install ChromeDriver
 
-3. Install and start Redis.
+3. Install and start Redis
+
+4. `mix deps.get`
+
+5. `mix run --no-halt` / `iex -S mix`
+
+6. Go to localhost:4000 - verk dashboard
 
 ## Parts
 
